@@ -1,0 +1,126 @@
+% This is a modification of an altacv.cls (v1.1.5, 1 December 2018) CV created by LianTze Lim (liantze@gmail.com)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%%%%%%%%%%%%%%%%
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+%bib
+\usepackage[backend=biber, style=authortitle]{biblatex}
+\addbibresource{twentlingbib.bib}
+
+%% AltaCV uses the fontawesome See texdoc.net/pkg/fontawecome
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+
+% Change the colours if you want to
+\definecolor{NiceCyan}{HTML}{00CC99}
+\definecolor{NiceBlue}{HTML}{006080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{NiceBlue}
+\colorlet{accent}{NiceBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Tristen Wentling}
+\tagline{Data Scientist: Applied Machine Learning}
+\photo{2.5cm}{tristen} %prefixed name of image file to use
+\personalinfo{%
+  \email{tristen.wentling@gmail.com}
+  \phone{417-380-3135}
+  \mailaddress{3874 Woodlake Cir Apt 166}
+  \location{Palm Harbor, FL}
+  \homepage{tristen.weebly.com/}
+  \linkedin{linkedin.com/in/tristenwentling}
+   \github{github.com/tristenwentling} 
+  }
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[tristen-p1sidebar]{Experience}
+
+\cvevent{Data Scientist}{The Depository Trust {\&} Clearing Corporation}{Apr 2018 --  present}{Tampa, FL}
+
+\begin{itemize}
+\item Machine learning specialist and data science professional in Application Development. Currently architecting and building enterprise production ML deployment pipeline, integrating a robust and well equipped enterprise data science platform, and prototyping and developing machine learning solutions including innovative projects using clustering methods and natural language processing to derive insights and provide business value with dashboard integration.
+\end{itemize}
+
+\divider
+
+\cvevent{Data Scientist}{Nielsen Media Research}{Feb. 2017 -- Apr 2018}{Oldsmar, FL}
+
+\begin{itemize}
+\item Engineering, integration, and validation of big data sources using Apache Spark, Python, Scala, and Spotfire to develop custom local television reporting tools. Building custom machine learning (regression and classification) models for client solutions and internal engineering. Modernization of customer reporting tools converting bash/SAS tools into Apache Spark and Python based tools. Development of custom reporting tools to investigate and solve problems.
+\end{itemize}
+
+\divider
+
+\cvevent{Graduate Teaching Assistant}{Kansas State University}{Jun 2016 -- Jan 2017}{Manhattan, KS}
+
+\begin{itemize}
+\item Recitation instructor for calculus 1 and tutoring for College Algebra, Calculus 1, 2, and 3, Business Calculus, and Linear Algebra.
+\end{itemize}
+
+\divider
+
+\cvevent{Graduate Teaching Assistant}{Missouri State University}{Aug 2014 -- May 2016}{Springfield, MO}
+
+\begin{itemize}
+\item Lecture instructor (5 sections) {\&} recitation instructor (2 sections) intermediate college algebra. Lead test development for 2 semesters.
+\end{itemize}
+\divider
+
+\cvevent{Freelance Python Developer}{Upwork}{May 2014 -- Aug 2014}{Springfield, MO}
+
+\begin{itemize}
+\item Back end Python developer with Ersatz Labs, an online deep learning platform , building data pipeline tooling.
+\end{itemize}
+
+
+%\clearpage
+
+\cvsection{Publications}
+
+\nocite{mt}
+\nocite{ut}
+\nocite{wp}
+
+\printbibliography[heading=none]
+
+\divider
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
